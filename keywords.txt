@@ -1,0 +1,112 @@
+#######################################
+# Syntax Coloring Map for Powermonitor
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PowerMonitor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+softReset	KEYWORD2
+watchdogReset	KEYWORD2
+applyDefaultSettings		KEYWORD2
+calibrate	KEYWORD2
+calibratePower	KEYWORD2
+calibrateVoltage	KEYWORD2
+calibrateCurrent	KEYWORD2
+calibratePhase	KEYWORD2
+calibrateTemp	KEYWORD2
+Temperature	KEYWORD2
+lineFrequency	KEYWORD2
+alarms	KEYWORD2
+overCurrentEvent	KEYWORD2
+underVoltageEvent	KEYWORD2
+voltageSAGcount	KEYWORD2
+overVoltageEvent	KEYWORD2
+vrms	KEYWORD2		   
+power	KEYWORD2
+energy	KEYWORD2
+cost	KEYWORD2
+irms	KEYWORD2
+reactivePower	KEYWORD2
+apparentPower	KEYWORD2
+powerFactor	KEYWORD2
+phaseAngle	KEYWORD2
+vrmsMin	KEYWORD2
+vrmsMax	KEYWORD2
+activePowerMin	KEYWORD2
+activePowerMax	KEYWORD2
+irmsMin	KEYWORD2
+irmsMax	KEYWORD2
+reactivePowerMin	KEYWORD2
+reactivePowerMax	KEYWORD2
+apparentPowerMin	KEYWORD2
+apparentPowerMax	KEYWORD2
+powerFactorMin	KEYWORD2
+powerFactorMax	KEYWORD2
+phaseAngleMin	KEYWORD2
+phaseAngleMax	KEYWORD2
+	
+totalPower	KEYWORD2
+totalEnergy	KEYWORD2
+totalCost	KEYWORD2
+totalIrms	KEYWORD2
+totalReactivePower	KEYWORD2
+totalApparentPower	KEYWORD2
+totalOverCurrentEvent	KEYWORD2
+activePowerMin	KEYWORD2
+activePowerMax	KEYWORD2
+irmsMin	KEYWORD2
+irmsMax	KEYWORD2
+reactivePowerMin	KEYWORD2
+reactivePowerMax	KEYWORD2
+apparentPowerMin	KEYWORD2
+apparentPowerMax	KEYWORD2
+
+vMaxSet	KEYWORD2
+iStartSet	KEYWORD2
+iMaxSet	KEYWORD2
+costSet	KEYWORD2
+costUnits	KEYWORD2
+minMax	KEYWORD2
+
+
+relay	KEYWORD2
+sequenceDelay	KEYWORD2
+energizeDelay	KEYWORD2
+denergizeDelay	KEYWORD2
+
+
+calPhaseTolerance	KEYWORD2
+calLineVoltage	KEYWORD2
+calLineCurrent	KEYWORD2
+calLinePhase	KEYWORD2
+calVoltageTolerance	KEYWORD2
+calCurrentTolerance	KEYWORD2
+calVoltageAveCount	KEYWORD2
+calCurrentAveCount	KEYWORD2
+calVoltageIteration	KEYWORD2
+calCurrentIteration	KEYWORD2
+calWattageTolerance	KEYWORD2
+calWattAveCount	KEYWORD2
+calWattIteration	KEYWORD2
+calLinePower	KEYWORD2
+alarmTempMaxThreshold	KEYWORD2
+alarmTempMaxThreshold	KEYWORD2
+alarmFreqMaxThreshold	KEYWORD2
+alarmFreqMaxThreshold	KEYWORD2
+alarmVoltageSAGthreshold	KEYWORD2
+alarmVoltageThreshold	KEYWORD2
+alarmVoltageMaxThreshold	KEYWORD2
+alarmCurrentMaxThreshold	KEYWORD2
+alarmPFnegThreshold	KEYWORD2
+alarmPFposThreshold	KEYWORD2
+				
+#######################################
+# Constants (LITERAL1)
+#######################################

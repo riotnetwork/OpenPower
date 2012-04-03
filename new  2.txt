@@ -1,0 +1,13 @@
+
+
+http://openpowerwatch.iriscouch.com/ HTTP/1.0
+Content-Length: 289
+Content-Type: application/json
+
+{"openpoweratch":{
+"voltage":221.13,
+"maxvoltage":222.41,
+"minvoltage":221.10,
+"Real power":30.52,
+"Temperature":22
+}}
