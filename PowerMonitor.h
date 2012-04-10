@@ -65,7 +65,7 @@ Copyright GPL 2.0 Daniel de Kock 2012
 			
 			 // multi channel commands
 			
-			int Temperature(int channel); // returns temperature of internals  CC.cc (20),(60)
+			double Temperature(int channel); // returns temperature of internals  CC.cc (20),(60)
 			double lineFrequency(int channel); // returns line freq in Hz.hz (21)(61)
 			double power(int channel); // returns active power second +WWW.www (27) (67)
 			double vrms(int channel); // returns rms Voltage +VVV.vvv (26) (66)		

@@ -57,9 +57,10 @@ Copyright GPL 2.0 Daniel de Kock 2012
 	// f = 50.00 Hz +- 1 Hz)
 	// Imax A = 65.4, IAcreep =default, IAmax
 	// Imax B = 0  IBcreep =default, IBmax	
-	// note that all the factory defaults are for 120 Vrms, 60 Hz power systems, we will change these to correspond to 230V 50 Hz systems now	
-		
-				delay(100);
+	// note that all the factory defaults are for 120 Vrms, 60 Hz power systems, we will change these to correspond to 230V 50 Hz systems now
+				delay(2000);	
+				Serial.println("I");
+				delay(100); // wait 1.5 second for pMon to send its welcome string
 				Serial.flush();
 				delay(20);
 				vMaxSet(374.80);	// set the external RMS voltage corresponding to 250 mVpk input of the ADC (A0) // 332.222 on V0.2, 356.892 on V 1, V0.2 477.8021536
@@ -176,18 +177,18 @@ Copyright GPL 2.0 Daniel de Kock 2012
 	//********************************************************************************************************//
 	//											Multi channel coommands
 	//********************************************************************************************************//
-	int PowerMonitor::Temperature(int channel) // returns temperature of internals  (20),(60)
+	double PowerMonitor::Temperature(int channel) // returns temperature of internals  (20),(60)
 	{
 	switch(channel)
 		{
 		case 1:
 			Serial << ")20?" << crl;// get channel 1 temperature
-			return int(processResponse(")20")+22);
+			return processResponse(")20")+22;
 		break;
 		
 		case 2:
 			Serial << ")60?" << crl;// get channel 2 temperature
-			return int(processResponse(")60")+22);
+			return processResponse(")60")+22;
 		break;
 		}
 	}
@@ -264,7 +265,21 @@ Copyright GPL 2.0 Daniel de Kock 2012
 	}
 	//char PowerMonitor::alarms(int channel); // returns alarm bits (22)(62) *##*
 	
-	
+	double PowerMonitor::irms(int channel) // returns rms Current +III.iii (2A) (6A)
+	{
+	switch(channel)
+		{
+		case 1:
+			Serial << ")2A?" << crl;// get channel 1
+			return processResponse(")2A");
+		break;
+		
+		case 2:
+			Serial << ")6A?" << crl;// get channel 2
+			return processResponse(")6A");
+		break;
+		}
+	}
 	
 	
 
@@ -524,21 +539,7 @@ Copyright GPL 2.0 Daniel de Kock 2012
 		// }
 	// }	
 	
-	// double PowerMonitor::irms(int channel) // returns rms Current +III.iii (2A) (6A)
-	// {
-	// switch(channel)
-		// {
-		// case 1:
-			// Serial << ")2A?" << crl;// get channel 1
-			// return processResponse(")2A");
-		// break;
-		
-		// case 2:
-			// Serial << ")6A?" << crl;// get channel 2
-			// return processResponse(")6A");
-		// break;
-		// }
-	// }
+	
 	
 	// double PowerMonitor::reactivePower(int channel) // returns reactive power (VAR) second +WWW.www (2B)(6B)
 	// {
